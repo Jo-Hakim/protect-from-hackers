@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">      <form name="f1">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i id="face" class="fa fa-facebook" style="background-color: mediumblue; color: white;"></i></a>
+          <a href="https://www.google.com" class="social"><i id="face" class="fa fa-google" style="background-color: yellow; color: rgb(255, 255, 255);"></i></a>
+          <a href="https://linkedin.com" class="social"><i id="face" class="fa fa-linkedin" style="background-color: blue;color: white;"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" name="name"/>
+        <input type="email" placeholder="Email" name="email1" />
+        <input type="password" placeholder="Password" name="password1"/>
+        <button onclick="return fun1()" style="background-color: greenyellow;">Sign up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form name="f2">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i id="face" class="fa fa-facebook" style="background-color: mediumblue; color: white;"></i></a>
+          <a href="https://www.google.com" class="social"><i id="face" class="fa fa-google-plus" style="background-color: yellow; color: rgb(255, 255, 255);"></i></a>
+          <a href="https://www.linkedin.com" class="social"><i id="face" class="fa fa-linkedin" style="background-color: blue;color: white;"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" name="email2" />
+        <input type="password" placeholder="Password" name="password2"/>
+        Forgot your password?
+        <button onclick="return fun2()" style="background-color: blue;">Sign in</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+  container.classList.remove("right-panel-active");
+}); 
+
+function fun1(){
+  if(f1.name.value==""||f1.email1.value==""||f1.password1.value==""){
+    alert("You mustn't Leave a required field!") ;
+    return false; 
+  }
+  if (f1.password1.value.length<8){
+    alert("password mustn't be less than 8 characters");
+    return false;
+  }
+  
+  else{
+    window.location.href = "index.htm";
+    
+  }
+
+}
+
+function fun2(){
+  if (f2.email2.value==""||f2.password2.value=="") {
+    alert("You mustn't leave a required field!") ;
+    return false; 
+  } 
+  if (f2.password2.value.length<8) {
+    alert("password mustn't be less than 8 characters");
+    return false;
+  }
+  else if(f2.email2.value!==""&&f2.password2.value!==""&&f2.password2.value.length>=8){
+    window.location.href = "indexEnglish.htm";
+    
+  }
+}
+</script>
+
+</body>
+</html>

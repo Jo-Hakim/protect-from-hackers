@@ -1,0 +1,131 @@
+body {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+
+}
+h2{
+    text-align: center;
+}
+
+.gwendolyn-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gwendolyn-bold {
+    font-family: "Cookie", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#Wrapper {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: #eef7ee;
+    font-family: 'Cookie', cursive;
+   
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    text-align: right;
+    list-style: lower-roman;
+}
+
+ul h3 {
+    font-size: 24px;
+}
+
+ul p {
+    margin-left: 20px;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    
+}
+body main table tr td{
+    color: #eef7ee;
+    text-decoration: none;
+}
+table{
+    font-family: 'Cookie', cursive;
+    border-collapse: collapse;
+    width: 95%;
+    
+    padding: 0;
+    margin: 0;
+    border: 1px solid white;
+
+
+    color:white;
+
+}
+table tr{
+    border: 1px solid ;
+   margin-left: 30px;
+
+}
+.head{
+    border: 1px solid black;
+    text-align: center;
+}
+.table1{
+    border: 1px solid white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+#Head{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.anchors{
+    text-align: center;
+}
+ p{
+    font-size: 25px;
+    margin-left: 40px;
+ }
+ p::first-letter{
+    margin-left: 80px;
+ }
+ #face:hover{
+    color: blue;
+    background-color: white;
+    border-radius: 50%;
+ }
+ #whats:hover{
+    color: greenyellow;
+     
+    border-radius: 50%;
+ }
+ #tube:hover{
+    color: red;
+    background-color: white;
+    border-radius: 50%;
+ }
